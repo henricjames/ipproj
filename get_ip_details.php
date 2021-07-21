@@ -13,7 +13,7 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, $headers );
 curl_setopt( $ch, CURLOPT_HEADER, false );
 curl_setopt( $ch, CURLOPT_ENCODING, 'gzip' );
-curl_setopt( $ch, CURLOPT_PROXY, '127.0.0.1:8888' );
+//curl_setopt( $ch, CURLOPT_PROXY, '127.0.0.1:8888' );
 $html = curl_exec( $ch );
 sleep( 1 );
 header('Content-Type: application/json');

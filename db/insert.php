@@ -27,5 +27,6 @@ $sql = "CREATE TABLE IF NOT EXISTS `ip_details`(ip varchar(500) NOT NULL UNIQUE,
 $result = mysqli_query( $conn, $sql );
 $sql = "INSERT INTO `ip_details`(`ip`, `ip_decimal`, `country`, `country_iso`, `country_eu`, `region_name`, `region_code`, `zip_code`, `city`, `latitude`, `longitude`, `time_zone`, `asn`, `asn_org`) VALUES ('$ip','$ip_decimal','$country','$country_iso','$country_eu','$region_name','$regioncode','$zipcode','$city','$latitude','$longitude','$timezone','$asn','$asn_org')";
 $result = mysqli_query( $conn, $sql );
+header('Access-Control-Allow-Origin: *');
 var_dump($result)
 ?>
