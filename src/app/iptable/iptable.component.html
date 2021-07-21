@@ -1,0 +1,43 @@
+<div class="current_ip">
+  <h2>Here are the results for your ip</h2>
+  <table>
+    <tr>
+      <th *ngFor="let heading of current_ip_data | keyvalue">
+        {{ heading.key }}
+      </th>
+    </tr>
+    <tr>
+      <td *ngFor="let tabledata of current_ip_data | keyvalue">
+        {{ tabledata.value }}
+      </td>
+    </tr>
+  </table>
+</div>
+
+<button (click)="showhistory()" class="show_history_button">
+  show previous search history
+</button>
+<div *ngIf="show_search_history">
+  <div class="table_wrapper">
+    <div class="message">
+      click on the table column heading to sort by that value
+    </div>
+    <div>
+      <table class="bordered">
+        <tr>
+          <th
+            *ngFor="let heading of httpoutput[0] | keyvalue"
+            (click)="sort(heading.key)"
+          >
+            {{ heading.key }}
+          </th>
+        </tr>
+        <tr *ngFor="let tabledata of httpoutput">
+          <td *ngFor="let item of tabledata | keyvalue">
+            {{ item.value }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

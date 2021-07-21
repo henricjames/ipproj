@@ -1,0 +1,29 @@
+ th, td{
+  padding:5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table{
+  max-width: 70%;
+  padding:20px;
+}
+
+.table_wrapper{
+  display:flex;
+  justify-content: center;
+}
+
+
+.show_history_button{
+  border-radius: 10px;
+  width:100px;
+  height:50px;
+  border: none;
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
+}
+.message{
+  padding: 20px;
+}
